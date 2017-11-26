@@ -1,0 +1,129 @@
+<!-- Students: Our work lies in the js file. -->
+
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Stopwatch</title>
+
+    <!-- Link to Eric Meyer's Reset CSS sheet -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <!-- Link to Boostrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- Link to custom CSS style sheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+  </head>
+
+  <body>
+
+    <!-- A new container -->
+    <div class="container">
+      <!-- Create a new row for the header -->
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 id="header">Totally Trivial Trivia!</h1>
+        </div>
+      </div>
+    <!-- Keep the container open until the bottom of the page -->
+    
+    <!-- Row for the timer -->
+    <div id="wrapper">
+      <div class="row">
+        <div class="col-sm-12">
+          <h3>Time Remaining: </h3>
+          <h1><span id="time-remaining"></span></h1>
+        </div>
+      </div>
+
+    <!-- Start the game -->
+    <div id="row">
+      <div class="col-sm-12">
+        <button onclick="startGame()">Click to Start!</button> 
+      </div>
+    </div>
+      
+
+    
+    <!-- Question 1 -->
+    <div id="questions">
+      <div class="row">
+        <div class="col-sm-12">
+          <h3 id="Q0">Which character was murdered on the train, in the movie <i>Murder on the Orient Express</i></h3>
+          <!-- The multiple choice questions must be listed in a form -->
+          <form>
+            <!-- radio buttons AKA multiple choice buttons are circular renders filled in or highlighted when selected 
+              Radio groups are a collection of radio buttons in a set of related options - only one can be selected at a time -->
+            <input type="radio" name="choiceq0" value="McQueen"> McQueen
+            <input type="radio" name="choiceq0" value="Beddoes"> Beddoes
+            <input type="radio" name="choiceq0" value="Ratchett"> Ratchett
+            <input type="radio" name="choiceq0" value="None"> None of the above
+          </form>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="row">
+        <div class="col-sm-12">
+          <h3 id="Q1">In the movie <i>Baby Driver</i>, the main character, Baby, had a girlfriend. What was her name? </h3>
+          <form>
+            <input type="radio" name="choiceq1" value="Cindy"> Cindy
+            <input type="radio" name="choiceq1" value="Debora"> Debora
+            <input type="radio" name="choiceq1" value="Kate"> Kate
+            <input type="radio" name="choiceq1" value="Alice"> Alice
+          </form>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="row">
+        <div class="col-sm-12">
+          <h3 id="Q2">The all-time classic animated movie, <i>Avatar</i>, was set on which planet?</h3>
+          <form>
+            <input type="radio" name="choiceq2" value="Pluto"> Pluto
+            <input type="radio" name="choiceq2" value="Neptune"> Neptune
+            <input type="radio" name="choiceq2" value="Jumanji"> Jumanji
+            <input type="radio" name="choiceq2" value="Pandora"> Pandora
+          </form>
+        </div>
+      </div>
+          <!-- Once all questions are answered - this button will submit all answers -->
+    <button onclick="submitAnswer()">Submit Answer</button> 
+    </div>
+
+
+    <!-- Possible Results -->
+  <div id="results">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 id="correct-answers">Correct Answers: </h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 id="incorrect-answers">Incorrect Answers: </h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 id="unanswered">Unanswered: </h3>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Script -->
+    <script type="text/javascript" src="./assets/javascript/app.js"></script>
+
+  </body>
+
+</html>
+
