@@ -7,7 +7,8 @@ var guesses = [];
 var answers = ["Ratchett", "Debora", "Pandora"];
 var correctAnswers = 0;
 var incorrectAnswers = 0;
-var unanswered = 0; 
+var unanswered = 0;
+var submitted = false; 
 
 function startGame() {
   var timer = setInterval(function() {
@@ -20,9 +21,13 @@ function startGame() {
       // Use document.getElementById("myDIV").style.display = "none"; 
       document.getElementById("questions").style.display = "block";
         // if(timeRemaining <= 0) {
-          if(timeRemaining <= 0 || on.click(submitAnswer)) {
+          if(timeRemaining <= 0) {
           clearInterval(timer);
           endGame();}
+          if(submitted){
+          clearInterval(timer);
+
+          }
         },1000);
         
   };
@@ -55,6 +60,7 @@ function startGame() {
 // game answers
 // Question 1
 function submitAnswer() {
+  submitted = true;
   var i = 0;
   for( ; i < answers.length; i++) {
     var radios = document.getElementsByName("choiceq" + i );
